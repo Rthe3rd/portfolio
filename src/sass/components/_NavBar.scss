@@ -1,0 +1,100 @@
+.header__navBar{
+    background-color: $color-gray-light-5;
+    background-image: linear-gradient(to top right, $color-gray-light-5, $color-blue-1);
+    position:fixed;
+    height: 5rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar{
+    font-size: 1rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: $primary-text-color;
+    padding: 1rem 2.55rem;
+    max-width: $section-width-nav;
+    width:100%;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 100;
+    text-decoration: none;
+    
+    &__nameIconContainer{
+        display:flex;
+        align-items: center;
+        &:hover, navbar_userCircleIcon{
+            transform: rotateY(360deg);   
+        }
+    }
+    &__name{
+        flex: 0 0 auto;
+        padding-left: $padding-1;
+        transition: transform 1s ease;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        // text shadow: moving color underneath? like a rainbow -> maybe when hovering contianer?
+        &:hover{
+            font-weight: 600;
+        }
+        &::after{
+            transition: all ease-in-out .3s;
+            background: none repeat scroll 0 0 #FF7400;
+            content: "";
+            display: block;
+            height: .15rem;
+            width: 0;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+
+
+    }
+    &__userCircleIcon{
+        height: 3rem;
+        flex: 0 0 auto;
+        transition: all 1s ease-in-out;
+    }
+    &__linksContainer{
+        display:flex;
+
+    }
+
+    &__link{
+        padding: 0 1.25rem;
+        border-bottom: none;
+        transition: transform .5s ease, font-weight .5s ease;
+        font-weight: 700;
+        font-size: 1rem;
+
+
+        &:hover{
+        }
+        // borders have to be styled specially, can't transition/transform borders
+        &:after{
+            transition: all ease-in-out .3s;
+            background: none repeat scroll 0 0 #FF7400;
+            content: "";
+            display: block;
+            height: .15rem;
+            width: 0;
+        }
+        &:visited{
+            color: $primary-text-color;
+        }
+        &:link{
+            text-decoration: none;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    }
+
+}

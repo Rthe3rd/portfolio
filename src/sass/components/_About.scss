@@ -1,0 +1,134 @@
+.section-about{
+    // height: 95vh;
+    padding: $padding-8 $padding-6 $padding-6 $padding-6;
+    background-color: #f7f2eb;
+    color: #1D1D21;    
+}
+.aboutGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    column-gap: 4rem;
+    max-width: $section-width-main;
+    margin: 0 auto;
+
+    &__left, &__right{
+        &__heading{
+            font-size: 2rem;
+            padding-bottom: 1rem;
+            z-index: -1;
+        }
+    }
+
+    &__left{
+        &__heading{
+            // text shadow: moving color underneath? like a rainbow -> maybe when hovering contianer?
+            &:hover{
+                font-weight: 600;
+            }
+            &::after{
+                transition: all ease-in-out .5s;
+                background: none repeat scroll 0 0 #FF7400;
+                content: "";
+                display: block;
+                height: .15rem;
+                width: 0;
+            }
+            &:hover:after {
+                width: 21%;
+            }
+        }
+
+        &__paragraph{
+            font-size: 1rem;
+            line-height: 2em;
+            padding: $padding-1 0;
+            & > span{
+                font-weight: 600;
+            }
+        }               
+    }
+    .about-btn{
+        margin-top: 2rem;
+        background-color: $color-gray-light-1;
+        &:hover{
+            background-color: $color-gray-dark-3;
+        }
+    }
+
+    &__right{
+        &__heading{
+            // text shadow: moving color underneath? like a rainbow -> maybe when hovering contianer?
+            &:hover{
+                font-weight: 600;
+            }
+            &::after{
+                transition: all ease-in-out .5s;
+                background: none repeat scroll 0 0 #FF7400;
+                content: "";
+                display: block;
+                height: .15rem;
+                
+                width: 0;
+            }
+            &:hover:after {
+                width: 19%;
+            }
+        }
+
+        &__container{
+            display:flex;
+            flex-wrap: wrap;
+        }
+
+        &__subcontainer{
+            position: relative;
+            margin: .45rem;
+            background-color: rgba($color-blue-2, .5);
+            // background-image: rgba(to bottom left, $color-blue-2, $color-gray-dark, .5);
+            // background-color: $color-blue-1;
+            border-radius: 1rem;
+            transition: all 1s ease;
+            &:hover{
+                transform: translateY(-12%);
+            }
+
+        }
+
+        &__icon{
+            padding: 1rem;
+            width: 5rem;
+            height: 5rem;
+            position: relative;
+            // z-index: 1;
+            border-radius: 2rem;
+            transition: all 1s ease;
+            // backface-visibility: hidden;
+
+        }
+
+        &__subcontainer:hover > &__icon{
+            transform: translateY(0%) rotateY(360deg);
+        }
+        
+        // transform: scale(0) opacity: 0 -> for labels
+        &__subtext{
+            color: $color-gray-dark-3;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            font-size: 1rem;
+            position: absolute;
+            left: 50%;
+            top: 100;
+            transition: all 1s ease;
+            transform: translate(-50%, -100%);
+            opacity: 0;
+            z-index: 2;
+        }
+        
+        &__subcontainer:hover > &__subtext{
+            opacity: 1;
+            transform: scale(1) translate(-50%, -110%) rotateY(1turn);
+        }  
+    }
+}

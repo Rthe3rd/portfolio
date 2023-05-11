@@ -1,0 +1,30 @@
+.section-footer{
+    padding: $padding-4 $padding-6;
+    background: linear-gradient(to left top, $color-blue-1, $color-gray-light-5);
+}
+
+.footer{
+    &__container{
+        text-align: center;
+        & > * {
+            text-decoration: none;
+        }
+    }
+    &__text{
+        color: $primary-text-color;
+        &::after{
+            content: "";
+            display: block;
+            height: .15rem;
+            width: 100%;
+            margin: $padding-1 0;
+            background-color: $primary-text-color;
+            border-radius: 1rem;
+        }
+    }
+    &__img{
+        width: 2rem;
+        margin: 0 1rem;
+    }
+    
+}

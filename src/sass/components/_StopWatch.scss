@@ -1,0 +1,47 @@
+.stopWatch {
+    font-size: 4rem;
+
+    &__container {
+        &__timeLabels {
+            display: flex;
+
+        }
+
+        &__time {
+            display: flex;
+        }
+
+        &__time {
+            display: flex;
+        }
+
+        &__controls {
+
+            &--startStop {
+                font-size: 3rem;
+            }
+            &--lapReset {
+                font-size: 3rem;
+            }
+        }
+        &__laps{
+
+            &--singleLap{
+                justify-content: space-between;
+                display:flex;
+                height: fit-content;
+                border: 1px solid black;
+                font-size: 2rem;
+                &--time{
+                    display:flex;
+                    & > *{
+                        margin: 0 0 0 0;
+                    }
+                }
+                & > *{
+                    margin: 0 0 0 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+// abstracts
+@import "abstracts/variables";
+
+// base
+@import "base/base";
+@import "base/Animations";
+
+// components
+@import "components/StopWatch";
+@import "components/NavBar";
+@import "components/About" ;
+@import "components/Projects";
+@import "components/Buttons";
+@import "components/Contact";
+@import "components/Footer";
+@import "components/Hero";
+
+// Pages
+@import "pages/Home"

@@ -54,7 +54,7 @@ const Projects = ({setProjectRefProp}) => {
         <section className = "section__projects" ref = {scrollRef} id = "projects" onClick = {clickOutside}>
             <div className="projects__heading__container">
                 <h2 className="projects__heading projects__heading--main">PROJECTS</h2>
-                <p className="projects__heading projects__heading--subtext">Below are some of the recent projets I have created  Please take a look and feel free to learn more about them</p>
+                <p className="projects__heading projects__heading--subtext">Below are some of the recent projets I have created.  Please take a look and feel free to learn more about them</p>
             </div>
             <div>
                 <div className="projects__main__container" id = "#p1">
